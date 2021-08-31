@@ -86,12 +86,22 @@ This event is fired when the transition animation ends for the current screen.
 
 /* Startup -->
 Card::animate
-
 CardContainer::handleTransition
-
 {"type":"transitionStart","target":"Home-ELymICNk-KylbdmYc2n0f","data":{"closing":false}}
-
 CardContainer::handleOpen
-
 {"type":"transitionEnd","target":"Home-ELymICNk-KylbdmYc2n0f","data":{"closing":false}}
+*/
+
+/*  navigation.navigate('Profile') -->
+Card::animate
+CardContainer::handleTransition
+CardContainer::handleOpen
+{"type":"transitionEnd","target":"Profile-cIfFeCG30guFUZZIV7XOH","data":{"closing":false}}
+*/
+
+/*  navigation.goBack() -->
+Card::animate
+CardContainer::handleTransition
+{"type":"transitionStart","target":"Profile-cIfFeCG30guFUZZIV7XOH","data":{"closing":true}}
+CardContainer::handleClose
 */
