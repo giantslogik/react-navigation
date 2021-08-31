@@ -103,6 +103,7 @@ function CardContainer({
     );
 
   const handleOpen = () => {
+    console.log("CardContainer::handleOpen");
     const { route } = scene.descriptor;
 
     onTransitionEnd({ route }, false);
@@ -110,6 +111,7 @@ function CardContainer({
   };
 
   const handleClose = () => {
+    console.log("CardContainer::handleClose");
     const { route } = scene.descriptor;
 
     onTransitionEnd({ route }, true);
@@ -143,6 +145,7 @@ function CardContainer({
     closing: boolean;
     gesture: boolean;
   }) => {
+    console.log("CardContainer::handleTransition");
     const { route } = scene.descriptor;
 
     if (!gesture) {

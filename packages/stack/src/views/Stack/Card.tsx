@@ -174,6 +174,7 @@ export default class Card extends React.Component<Props> {
     closing: boolean;
     velocity?: number;
   }) => {
+    console.log("Card::animate");
     const { gesture, transitionSpec, onOpen, onClose, onTransition } =
       this.props;
 
@@ -261,6 +262,7 @@ export default class Card extends React.Component<Props> {
   private handleGestureStateChange = ({
     nativeEvent,
   }: PanGestureHandlerGestureEvent) => {
+    console.log("Card::handleGestureStateChange");
     const {
       layout,
       onClose,
