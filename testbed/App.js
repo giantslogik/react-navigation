@@ -73,3 +73,25 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
+/* Desired transitionStart/transitionEnd Behaviour -->
+The navigator can emit events on certain actions. Supported events are:
+
+transitionStart#
+This event is fired when the transition animation starts for the current screen.
+
+transitionEnd#
+This event is fired when the transition animation ends for the current screen.
+*/
+
+/* Startup -->
+Card::animate
+
+CardContainer::handleTransition
+
+{"type":"transitionStart","target":"Home-ELymICNk-KylbdmYc2n0f","data":{"closing":false}}
+
+CardContainer::handleOpen
+
+{"type":"transitionEnd","target":"Home-ELymICNk-KylbdmYc2n0f","data":{"closing":false}}
+*/
