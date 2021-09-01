@@ -105,7 +105,7 @@ function CardContainer({
   const handleOpen = () => {
     console.log("CardContainer::handleOpen");
     const { route } = scene.descriptor;
-
+    console.log("CardContainer::handleOpen --> onTransitionEnd");
     onTransitionEnd({ route }, false);
     onOpenRoute({ route });
   };
@@ -113,7 +113,7 @@ function CardContainer({
   const handleClose = () => {
     console.log("CardContainer::handleClose");
     const { route } = scene.descriptor;
-
+    console.log("CardContainer::handleClose --> onTransitionEnd");
     onTransitionEnd({ route }, true);
     onCloseRoute({ route });
   };
@@ -155,7 +155,7 @@ function CardContainer({
     } else {
       onPageChangeCancel?.();
     }
-
+    console.log("CardContainer::handleTransition --> onTransitionStart");
     onTransitionStart?.({ route }, closing);
   };
 
