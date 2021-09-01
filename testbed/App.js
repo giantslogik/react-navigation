@@ -87,21 +87,63 @@ This event is fired when the transition animation ends for the current screen.
 /* Startup -->
 Card::animate
 CardContainer::handleTransition
-{"type":"transitionStart","target":"Home-ELymICNk-KylbdmYc2n0f","data":{"closing":false}}
+CardContainer::handleTransition --> onTransitionStart
+useEventEmitter::emit listenRef.current? function callbacks undefined [transitionStart]
+useNavigationBuilder::useEventEmittertarget Home-EJgcNHbKBV0ogN9_hgesS route [object Object] [transitionStart]
+{"type":"transitionStart","target":"Home-EJgcNHbKBV0ogN9_hgesS","data":{"closing":false}}
+
 CardContainer::handleOpen
-{"type":"transitionEnd","target":"Home-ELymICNk-KylbdmYc2n0f","data":{"closing":false}}
+CardContainer::handleOpen --> onTransitionEnd
+useEventEmitter::emit listenRef.current? function callbacks undefined [transitionEnd]
+useNavigationBuilder::useEventEmitter target Home-EJgcNHbKBV0ogN9_hgesS route [object Object] [transitionEnd]
+{"type":"transitionEnd","target":"Home-EJgcNHbKBV0ogN9_hgesS","data":{"closing":false}}
 */
 
 /*  navigation.navigate('Profile') -->
 Card::animate
 CardContainer::handleTransition
+CardContainer::handleTransition --> onTransitionStart
+useEventEmitter::emit listenRef.current? function callbacks undefined [transitionStart]
+useNavigationBuilder::useEventEmitter target Profile-h21G69uRY5mVcErqK27k2 route undefined [transitionStart]
+!!!!BUG!!!!
+
+useEventEmitter::emit listenRef.current? undefined callbacks 0 [options]
+useEventEmitter::emit listenRef.current? function callbacks undefined [blur]
+useNavigationBuilder::useEventEmittertarget Home-EJgcNHbKBV0ogN9_hgesS route [object Object] [blur]
+useEventEmitter::emit listenRef.current? function callbacks 1 [focus]
+useNavigationBuilder::useEventEmittertarget Profile-h21G69uRY5mVcErqK27k2 route [object Object] [focus]
+useEventEmitter::emit listenRef.current? function callbacks 0 [state]
+useNavigationBuilder::useEventEmittertarget undefined route [object Object] [state]
+useEventEmitter::emit listenRef.current? undefined callbacks 0 [state]
+
 CardContainer::handleOpen
-{"type":"transitionEnd","target":"Profile-cIfFeCG30guFUZZIV7XOH","data":{"closing":false}}
+CardContainer::handleOpen --> onTransitionEnd
+useEventEmitter::emit listenRef.current? function callbacks undefined [transitionEnd]
+useNavigationBuilder::useEventEmittertarget Profile-h21G69uRY5mVcErqK27k2 route [object Object] [transitionEnd]
+{"type":"transitionEnd","target":"Profile-h21G69uRY5mVcErqK27k2","data":{"closing":false}}
+
 */
 
 /*  navigation.goBack() -->
 Card::animate
 CardContainer::handleTransition
-{"type":"transitionStart","target":"Profile-cIfFeCG30guFUZZIV7XOH","data":{"closing":true}}
+CardContainer::handleTransition --> onTransitionStart
+useEventEmitter::emit listenRef.current? function callbacks undefined [transitionStart]
+useNavigationBuilder::useEventEmittertarget Profile-h21G69uRY5mVcErqK27k2 route [object Object] [transitionStart]
+{"type":"transitionStart","target":"Profile-h21G69uRY5mVcErqK27k2","data":{"closing":true}}
+
+useEventEmitter::emit listenRef.current? undefined callbacks 0 [options]
+useEventEmitter::emit listenRef.current? function callbacks undefined [blur]
+useNavigationBuilder::useEventEmittertarget Profile-h21G69uRY5mVcErqK27k2 route undefined [blur]
+useEventEmitter::emit listenRef.current? function callbacks 1 [focus]
+useNavigationBuilder::useEventEmittertarget Home-EJgcNHbKBV0ogN9_hgesS route [object Object] [focus]
+useEventEmitter::emit listenRef.current? function callbacks 0 [state]
+useNavigationBuilder::useEventEmittertarget undefined route [object Object] [state]
+useEventEmitter::emit listenRef.current? undefined callbacks 0 [state]
+
 CardContainer::handleClose
+CardContainer::handleClose --> onTransitionEnd
+useEventEmitter::emit listenRef.current? function callbacks undefined [transitionEnd]
+useNavigationBuilder::useEventEmittertarget Profile-h21G69uRY5mVcErqK27k2 route undefined [transitionEnd]
+
 */
