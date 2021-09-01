@@ -510,6 +510,9 @@ export default function useNavigationBuilder<
       );
     }
     console.log("useNavigationBuilder::useEventEmitter"+" target "+ e.target  +" route "+route+" ["+e.type+"]");
+    //if(route==null || e.type=='transitionStart' || e.type=='transitionEnd'){
+    console.log("\n"+JSON.stringify(state.routes, null, 2)+"\n");
+    //}
     if (route == null) {
       return;
     }
