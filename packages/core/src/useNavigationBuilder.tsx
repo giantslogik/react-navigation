@@ -509,7 +509,7 @@ export default function useNavigationBuilder<
         ...Object.keys(screens).filter((name) => route?.name === name)
       );
     }
-
+    console.log("useNavigationBuilder::useEventEmitter"+" target "+ e.target  +" route "+route+" ["+e.type+"]");
     if (route == null) {
       return;
     }

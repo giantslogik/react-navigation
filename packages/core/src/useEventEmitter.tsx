@@ -116,7 +116,7 @@ export default function useEventEmitter<T extends Record<string, any>>(
           },
         });
       }
-
+      console.log("useEventEmitter::emit"+" listenRef.current? "+ typeof listenRef.current  +" callbacks "+callbacks?.length+" ["+event.type+"]");
       listenRef.current?.(event);
 
       callbacks?.forEach((cb) => cb(event));
