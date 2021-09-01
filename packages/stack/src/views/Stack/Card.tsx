@@ -105,11 +105,13 @@ export default class Card extends React.Component<Props> {
   };
 
   componentDidMount() {
+    console.log("Card::componentDidMount");
     this.animate({ closing: this.props.closing });
     this.isCurrentlyMounted = true;
   }
 
   componentDidUpdate(prevProps: Props) {
+    console.log("Card::componentDidUpdate");
     const { layout, gestureDirection, closing } = this.props;
     const { width, height } = layout;
 
@@ -197,7 +199,7 @@ export default class Card extends React.Component<Props> {
 
     clearTimeout(this.pendingGestureCallback);
 
-    onTransition?.({ closing, gesture: velocity !== undefined });
+    onTransition?.({ closing, gesture: velocity !== undefined });//<-CardContainer::handleTransition
     animation(gesture, {
       ...spec.config,
       velocity,
@@ -288,7 +290,7 @@ export default class Card extends React.Component<Props> {
           gestureDirection === 'vertical-inverted'
             ? nativeEvent.velocityY
             : nativeEvent.velocityX;
-
+        
         this.animate({ closing: this.props.closing, velocity });
 
         onGestureCanceled?.();
