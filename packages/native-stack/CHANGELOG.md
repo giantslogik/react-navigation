@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.1.1](https://github.com/react-navigation/react-navigation/compare/@react-navigation/native-stack@6.1.0...@react-navigation/native-stack@6.1.1) (2021-09-02)
+
+
+### Bug Fixes
+
+* pass title style to <HeaderTtitle />. fixes [#9885](https://github.com/react-navigation/react-navigation/issues/9885) ([127e030](https://github.com/react-navigation/react-navigation/commit/127e030e03cfec9600cca0327edd159a7bb08896))
+
+
+
+
+
 # [6.1.0](https://github.com/react-navigation/react-navigation/compare/@react-navigation/native-stack@6.0.6...@react-navigation/native-stack@6.1.0) (2021-08-18)
 
 

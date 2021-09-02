@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/react-navigation/react-navigation/compare/@react-navigation/elements@1.1.0...@react-navigation/elements@1.1.1) (2021-09-02)
+
+**Note:** Version bump only for package @react-navigation/elements
+
+
+
+
+
 # [1.1.0](https://github.com/react-navigation/react-navigation/compare/@react-navigation/elements@1.0.4...@react-navigation/elements@1.1.0) (2021-08-17)
 
 

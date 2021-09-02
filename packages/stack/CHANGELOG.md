@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.8](https://github.com/react-navigation/react-navigation/compare/@react-navigation/stack@6.0.7...@react-navigation/stack@6.0.8) (2021-09-02)
+
+
+### Bug Fixes
+
+* stop  animations on unmount/cleanup ([5fb5f41](https://github.com/react-navigation/react-navigation/commit/5fb5f41eb6cf86ebe2f7777d6c98bda16ce71b5b))
+* transitionStart and transitionEnd events are now consistently sent to current screen. ([bf7be52](https://github.com/react-navigation/react-navigation/commit/bf7be52f62532818bbf360f62c4ac6372564af4a))
+* transitionStart and transitionEnd events are now consistently sent to current screen. ([52405bd](https://github.com/react-navigation/react-navigation/commit/52405bd844ae979546cb60a26d0338bcaa38412e))
+
+
+
+
+
 ## [6.0.7](https://github.com/react-navigation/react-navigation/compare/@react-navigation/stack@6.0.6...@react-navigation/stack@6.0.7) (2021-08-17)
 
 
