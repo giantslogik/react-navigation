@@ -143,6 +143,7 @@ export default class Card extends React.Component<Props> {
   }
 
   componentWillUnmount() {
+    console.log("Card::componentWillUnmount");
     this.props.gesture.stopAnimation();
     this.isCurrentlyMounted = false;
     this.handleEndInteraction();
