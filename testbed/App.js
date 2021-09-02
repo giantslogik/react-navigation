@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Button, Text, Animated } from 'react-native';
+import { View, Button, Text, Animated, Easing} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -62,6 +62,14 @@ const forFade = ({ current, next }) => {
   };
 };
 
+const transitionSpec = {
+  animation: 'timing',
+  config: {
+    duration: 3000,
+    easing: Easing.out(Easing.poly(2))
+  }
+};
+
 const Stack = createStackNavigator();
 
 function MyStack() {
@@ -69,7 +77,8 @@ function MyStack() {
     <Stack.Navigator screenListeners={({ navigation, route }) => ({
               transitionStart: (e) => {console.log("---->   [[["+JSON.stringify(e))+"]]]";} ,
               transitionEnd: (e) => {console.log("<----   [[["+JSON.stringify(e)+"]]]");} ,
-            })}>
+            })}
+            >
       <Stack.Screen
         name="Home"
         component={Home}
@@ -84,6 +93,10 @@ function MyStack() {
         options={{ headerStyleInterpolator: forFade,
           headerTintColor: 'white',
           headerStyle: { backgroundColor: 'green' },
+          transitionSpec: {
+            open: transitionSpec,
+            close: transitionSpec,
+          }
         }}
       />
       <Stack.Screen
@@ -92,6 +105,10 @@ function MyStack() {
         options={{ headerStyleInterpolator: forFade ,
           headerTintColor: 'white',
           headerStyle: { backgroundColor: 'blue' },
+          transitionSpec: {
+            open: transitionSpec,
+            close: transitionSpec,
+          }
         }}
       />
       <Stack.Screen
@@ -100,6 +117,10 @@ function MyStack() {
         options={{ headerStyleInterpolator: forFade ,
           headerTintColor: 'white',
           headerStyle: { backgroundColor: 'black' },
+          transitionSpec: {
+            open: transitionSpec,
+            close: transitionSpec,
+          }
         }}
       />
     </Stack.Navigator>
