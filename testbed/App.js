@@ -67,8 +67,8 @@ const Stack = createStackNavigator();
 function MyStack() {
   return (
     <Stack.Navigator screenListeners={({ navigation, route }) => ({
-              transitionStart: (e) => {console.log(JSON.stringify(e));} ,
-              transitionEnd: (e) => {console.log(JSON.stringify(e));} ,
+              transitionStart: (e) => {console.log("---->   [[["+JSON.stringify(e))+"]]]";} ,
+              transitionEnd: (e) => {console.log("<----   [[["+JSON.stringify(e)+"]]]");} ,
             })}>
       <Stack.Screen
         name="Home"
